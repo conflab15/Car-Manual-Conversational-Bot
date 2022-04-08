@@ -8,41 +8,42 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AIChatBotCarManual</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <div class="container py-3">
+       <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <img src="/images/vwlogo.svg" alt="VW Logo" width="45" height="35" />
+                <span class="fs-4">Volkswagen Vehicle Care</span>
+              </a>
 
-    <footer class="border-top footer text-muted">
+              <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+                <a class="m-3 py-2 text-dark text-decoration-none" href="#">Find a Dealership</a>
+                <a class="m-3 py-2 text-dark text-decoration-none" href="#">Book a Service</a>
+                <a class="m-3 py-2 text-dark text-decoration-none" href="#">Diagnose a Problem</a>
+                <a class="m-3 py-2 text-dark text-decoration-none" href="#">Contact us</a>
+              </nav>
+            </div>
+
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h1 class="display-4 fw-normal">Servicing, Maintenance and Vehicle Care</h1>
+              <p class="fs-5 text-muted">All the necessary options in regards to vehicle servicing, service plans, maintenance, care and diagnosing vehicle problems.</p>
+            </div>
+        </header>
         <div class="container">
-            &copy; 2022 - AIChatBotCarManual - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2022 - AI Chat-Bot Car Manual - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </div>
 </body>
 </html>
